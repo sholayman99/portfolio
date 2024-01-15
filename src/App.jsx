@@ -4,7 +4,7 @@ import HomePage from "./Pages/HomePage.jsx";
 
 const App = () => {
     return (
-        <div>
+        <div className={"bg-[#141A2A] max-w-7xl mx-auto"}>
             <BrowserRouter>
                 <Routes>
                     <Route path={"/"} element={ <HomePage /> } />

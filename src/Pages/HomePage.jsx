@@ -3,9 +3,9 @@ import AppNavbar from "../Components/AppNavbar.jsx";
 
 const HomePage = () => {
     return (
-        <>
-         <AppNavbar />   
-        </>
+        <div>
+         <AppNavbar />
+        </div>
     );
 };
 
