@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 const ImportantLinks = () => {
 
     return (
-        <div className={"grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 px-10"}>
+        <div className={"grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 px-10 pb-20"}>
 
             <motion.a  whileHover={{ scale: 1.1 }}
                        whileTap={{ scale: 0.9 }}
