@@ -6,7 +6,7 @@ const AppNavbar = () => {
 
     return (
         <>
-            <nav className="flex items-center bg-[#111827] text-[#e5e7eb] justify-between flex-wrap p-6">
+            <nav className="flex items-center bg-[#111827] text-[#e5e7eb] justify-between flex-wrap p-4">
                 <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
                    <h2 className={"text-2xl uppercase"}>md.sholayman</h2>
                 </div>
@@ -34,8 +34,10 @@ const AppNavbar = () => {
                 <div
                     className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
                 >
-                    <div className="lg:text-lg md:text-md mt-2 text-sm flex flex-col lg:flex-row lg:items-center lg:gap-10 gap-2  uppercase font-semibold lg:flex-grow">
-                        <NavLink to={"/"} className="block lg:inline-block lg:mt-0 text-white-200">
+                    <div className="lg:md:text-[16px]  text-sm font-medium py-4  flex flex-col lg:flex-row lg:items-center lg:gap-10 gap-2  uppercase lg:flex-grow">
+                        <NavLink  className={({ isActive}) => isActive ?
+                            "block lg:inline-block lg:mt-0 text-white-200" :
+                            "block lg:inline-block lg:mt-0 text-white-200"} to={"/"}>
                            Home
                         </NavLink>
                         <NavLink to={"/"} className="block lg:inline-block lg:mt-0 text-white-200 ">

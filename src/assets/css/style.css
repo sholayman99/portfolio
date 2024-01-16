@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Genos&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .font-genos{
     font-family: 'Genos', sans-serif;
 }
-
-.font-fjalla{
-    font-family: 'Fjalla One', sans-serif;
-}
-
 .font-roboto{
     font-family: 'Roboto', sans-serif;
 }
+

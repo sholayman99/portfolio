@@ -4,23 +4,23 @@ import img from "../assets/images/me.jpg"
 
 const Header = () => {
     return (
-        <div className={"flex items-center justify-center gap-5 lg:h-screen flex-col"}>
-            <img src={img} alt={""} className={"w-48 rounded-full"} />
-             <h2 className={"text-3xl font-genos"}>MD.SHOLAYMAN</h2>
+        <div className={"flex items-center justify-center gap-5 lg:md:h-screen h-[60vh] flex-col"}>
+            <img src={img} alt={""} className={"lg:md:w-48 w-32 rounded-full"} />
+             <h2 className={"lg:md:text-3xl text-xl font-genos"}>MD.SHOLAYMAN</h2>
             <TypeAnimation
                 sequence={[
                     "Full-Stack Developer",
-                    1000,
+                    1200,
                     "Mern-Stack Developer",
-                    1000,
-                    'Aspire to be a leader',
-                    1000,
+                    1200,
+                    'Aspire To Be A Leader',
+                    1200,
                     'Next Gen Developer',
-                    1000
+                    1200
                 ]}
                 wrapper="span"
-                speed={50}
-                style={{ fontSize: '2.5em', display: 'inline-block',color:'#ffffff' }}
+                speed={40}
+                className={"lg:md:text-[2.5em] text-[1.8rem] inline-block text-base"}
                 repeat={Infinity}
             />
 
