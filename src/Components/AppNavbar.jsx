@@ -1,63 +1,105 @@
-import React, {useState} from 'react';
+import React from "react";
+import {Navbar, MobileNav, Typography, IconButton,} from "@material-tailwind/react";
 import {HashLink as NavLink} from "react-router-hash-link";
 
-const AppNavbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+
+const AppNavbar =()=> {
+    const [openNav, setOpenNav] = React.useState(false);
+
+    React.useEffect(() => {
+        window.addEventListener(
+            "resize",
+            () => window.innerWidth >= 960 && setOpenNav(false),
+        );
+    }, []);
+
+    const navList = (
+        <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+            <Typography as="li" variant="medium"
+                        className="flex items-center gap-x-2 p-1 font-medium" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                     stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round"
+                     d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+
+                <NavLink to="#" smooth className="flex items-center"> Home </NavLink>
+            </Typography>
+
+            <Typography as="li" variant="medium"
+                        className="flex items-center gap-x-2 p-1 font-medium" >
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                   stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round"
+                   d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                </svg>
+
+                <NavLink to="#about" smooth className="flex items-center"> About </NavLink>
+            </Typography>
+            <Typography as="li" variant="medium"
+                        className="flex items-center gap-x-2 p-1 font-medium" >
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                     stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round"
+                     d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                </svg>
+
+
+
+                <NavLink to="#projects" smooth className="flex items-center"> Projects </NavLink>
+            </Typography>
+            <Typography as="li" variant="medium"
+                        className="flex items-center gap-x-2 p-1 font-medium" >
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                     stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round"
+                     d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+
+
+                <NavLink to="#contact" smooth className="flex items-center"> Contact </NavLink>
+            </Typography>
+
+
+
+        </ul>
+    );
 
     return (
-         <section className={""}>
-             <nav className="flex right-3 flex-wrap items-center bg-[#111827] justify-between p-4">
-                 <div className="flex items-center  flex-shrink-0 text-white mr-6 lg:mr-72">
-                     <h2 className={"text-2xl uppercase"}>md.sholayman</h2>
-                 </div>
-                 <div className="block lg:hidden">
-                     <button
-                         onClick={() => setIsOpen(!isOpen)}
-                         className="flex items-center px-3 py-2 rounded text-black-500 hover:text-black-400"
-                     >
-                         <svg
-                             className={`fill-current h-5 w-5 ${isOpen ? "hidden" : "block"}`}
-                             viewBox="0 0 20 20"
-                             xmlns="http://www.w3.org/2000/svg"
-                         >
-                             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                         </svg>
-                         <svg
-                             className={`fill-current h-5 w-5 ${isOpen ? "block" : "hidden"}`}
-                             viewBox="0 0 20 20"
-                             xmlns="http://www.w3.org/2000/svg"
-                         >
-                             <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
-                         </svg>
-                     </button>
-                 </div>
-                 <div
-                     className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}
-                 >
-                     <div className="lg:md:text-[16px]  text-sm font-medium py-4  flex flex-col lg:flex-row lg:items-center lg:gap-10 gap-2  uppercase lg:flex-grow">
-                         <NavLink to={"#"} smooth
-                             className="block  lg:inline-block lg:mt-0 text-white-200">
-                             Home
-                         </NavLink>
-                         <NavLink to={"#about"} smooth
-                              className="block  lg:inline-block lg:mt-0 text-white-200">
-                             About
-                         </NavLink>
-                         <NavLink to={"#projects"} smooth
-                              className="block  lg:inline-block lg:mt-0 text-white-200">
-                             Projects
-                         </NavLink>
-                         <NavLink to={"#contact"} smooth
-                               className="block  lg:inline-block lg:mt-0 text-white-200">
-                             Contact
-                         </NavLink>
-                     </div>
+        <Navbar className="mx-auto bg-[#111827] border-none z-50 fixed top-0 m-0 shadow-lg font-roboto px-4 py-2 lg:px-8 lg:py-4">
+            <div className="container mx-auto flex flex-wrap items-center lg:gap-44 ">
+                <Typography className="mr-4 text-3xl font-genos cursor-pointer py-1.5">
+                   <NavLink to={"#"} smooth> Md.Sholayman</NavLink>
+                </Typography>
+                <div className="hidden lg:block">{navList}</div>
 
-                 </div>
-             </nav>
-         </section>
-
+                <IconButton
+                    variant="text"
+                    className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+                    ripple={false}
+                    onClick={() => setOpenNav(!openNav)}
+                >
+                    {openNav ? (
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" fill="none" className="h-6 w-6" viewBox="0 0 24 24"
+                            stroke="currentColor" strokeWidth={2} >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    ) : (
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
+                            stroke="currentColor" strokeWidth={2} >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    )}
+                </IconButton>
+            </div>
+            <MobileNav open={openNav}>
+                <div className="container  mx-auto">
+                    {navList}
+                </div>
+            </MobileNav>
+        </Navbar>
     );
-};
+}
 
-export default AppNavbar;
+export  default  AppNavbar ;
