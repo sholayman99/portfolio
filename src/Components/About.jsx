@@ -5,7 +5,7 @@ const About = () => {
     let skills ="HTML,CSS,JavaScript,React.js,Node.js,express.js,MongoDB,Mongoose,Git,GitHub," +
         "Tailwind CSS,Bootstrap,zustand,React-Redux Basic"
     return (
-        <section id={"about"} className={"lg:py-20  py-8 flex  items-center justify-center px-10  flex-col gap-4 "}>
+        <section id={"about"} className={"lg:py-24  py-8 flex  items-center justify-center px-10  flex-col gap-4 "}>
            <div className={"flex items-center justify-center lg:w-[60%]  flex-col gap-4 lg:gap-6"}>
                <motion.h2 initial={{x:-200}}   transition={{ duration: 1.3,ease:"easeOut"}} whileInView={{x:0}}
                           className={"title-text lg:text-4xl md:text-4xl text-2xl"}>ABOUT ME</motion.h2>

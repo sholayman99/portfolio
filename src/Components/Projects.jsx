@@ -13,7 +13,7 @@ const Projects = () => {
         return <h2> Loading.... </h2>
     }else{
         return (
-            <section id={"projects"} className={"lg:py-20 py-8 flex  items-center justify-center px-6  flex-col gap-4 "}>
+            <section id={"projects"} className={"lg:py-24 py-8 flex  items-center justify-center px-6  flex-col gap-4 "}>
                 <div className={"flex items-center justify-center lg:w-[60%]  flex-col gap-4 lg:gap-6"}>
                     <motion.h2 initial={{x:-200}}   transition={{ duration: 1.3,ease:"easeOut"}} whileInView={{x:0}}
                                className={"title-text lg:text-4xl md:text-4xl text-2xl"}>PROJECTS</motion.h2>
