@@ -6,20 +6,21 @@ const About = () => {
         "Tailwind CSS,Bootstrap,zustand,React-Redux Basic"
     return (
         <section id={"about"} className={"lg:py-20 md:py-20 py-10 flex  items-center justify-center px-10  flex-col gap-4 "}>
-           <div className={"flex items-center justify-center lg:w-[50%]  flex-col gap-4 lg:gap-6"}>
-               <h2 className={"title-text lg:md:text-4xl text-xl"}>ABOUT ME</h2>
+           <div className={"flex items-center justify-center lg:w-[60%]  flex-col gap-4 lg:gap-6"}>
+               <motion.h2 initial={{x:-200}}   transition={{ duration: 1.3,ease:"easeOut"}} whileInView={{x:0}}
+                          className={"title-text lg:text-4xl md:text-4xl text-2xl"}>ABOUT ME</motion.h2>
                <div className={"w-8 h-1 rounded-xl bg-[#ffffff]"}></div>
-               <p className={"text-gray-400 font-[400] text-center lg:text-xl md:text-lg text-md"}>Here you will find more information about me, what I do,
-                   and my current skills mostly in terms of programming and technology</p>
+               <p className={"text-gray-400 font-[400] text-center lg:text-xl md:text-lg text-sm"}>Here you will find some
+                   of the personal and clients projects that I created with each project containing its own case study</p>
            </div>
             <div  className={"flex lg:flex-row flex-col justify-between items-center lg:py-20 md:py-20 py-10" +
                 " lg:gap-16 gap-10"}>
                 <div className={"lg:max-w-[50%]"}>
                     <h3 className={"lg:text-2xl md:text-2xl text-xl mb-10 "}>Get to know me!</h3>
-                    <motion.p initial={{y:150}}   transition={{ duration: 1.2}} whileInView={{y:0}}
+                    <motion.p initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
                         className={"text-gray-400 font-[300] text-justify lg:text-lg md:text-[17px] text-sm"}>
                         I'm a <span className={"text-white font-[500]"}>Mern-stack </span>
-                        Web Developer building the  <span className={"text-white font-[500]"}>Full-stack </span> of
+                        Web Developer building the  <span className={"text-white font-[500]"}>Full-stack </span>
                         Websites and Web Applications that leads to the success of the overall product.
                         Check out some of my work in the Projects section. I also like sharing content related
                         to the stuff that I have learned over the years in <span className={"text-white font-[500]"}> Web Development </span> so it can help
@@ -30,7 +31,7 @@ const About = () => {
                         <span className={"text-white font-[500]"}> Internship </span> where I can contribute, learn and grow.
                         If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</motion.p>
                 </div>
-                <motion.div initial={{y:150}}    transition={{ duration: 1.5 }} whileInView={{y:0}}>
+                <motion.div initial={{y:120}}  transition={{ duration: 1.2 ,ease:"easeOut"}} whileInView={{y:0}}>
                     <div className={"grid lg:md:grid-cols-4 md:grid-cols-7 grid-cols-3 gap-3"}>
                         {
                             skills.split(",").map((item,i)=>{
