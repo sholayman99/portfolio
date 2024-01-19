@@ -4,6 +4,7 @@ import Header from "../Components/Header.jsx";
 import About from "../Components/About.jsx";
 import Projects from "../Components/Projects.jsx";
 import ProjectStore from "../Store/ProjectStore.js";
+import Contact from "../Components/Contact.jsx";
 
 
 
@@ -24,6 +25,7 @@ const HomePage = () => {
             <Header />
             <About />
             <Projects />
+            <Contact />
 
         </>
 

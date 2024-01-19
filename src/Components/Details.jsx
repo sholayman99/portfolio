@@ -19,13 +19,14 @@ const Details = () => {
                    <h1 className={"lg:text-5xl md:text-4xl text-2xl font-genos  font-bold"}>
                        {SingleProject['title']}
                    </h1>
+                   <div className={"w-10 h-0.5 rounded-xl bg-[#ffffff]"}></div>
                    <p className={"lg:text-lg md:text-[15.5px] text-sm text-gray-200"}>
                        This page contains the case study of
                        <span className={"font-[500]"}> {SingleProject['title']} </span>which includes the Project
                        Overview, Tools Used and Live Links to the official product.
                    </p>
-                   <motion.button className={"bg-gray-200 hover:bg-gray-300 text-black font-bold " +
-                       "lg:px-10 lg:text-xl md:text-[16px] text-[13px] md:px-8 md:py-4 px-6 py-3 lg:py-4 rounded-xl uppercase text-sm"}
+                   <motion.button className={"hover:bg-gray-200 bg-white bg-opacity-10 hover:text-black font-bold " +
+                       "lg:px-10 lg:text-xl md:text-[16px] text-[13px] md:px-8 md:py-4 px-6 py-3 lg:py-4 rounded-xl uppercase"}
                              whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             transition={{ type: "spring", stiffness: 400, damping: 17 }}>
@@ -57,6 +58,15 @@ const Details = () => {
                        </div>
                    </div>
                </div>
+
+                    <motion.button className={"hover:bg-gray-200 bg-white bg-opacity-10 hover:text-black font-bold " +
+                        "lg:px-10 lg:text-lg md:text-[16px] text-[13px] md:px-8 md:py-4 px-6 py-3 lg:py-4 rounded-xl uppercase"}
+                                   whileHover={{ scale: 1.1 }}
+                                   whileTap={{ scale: 0.9 }}
+                                   transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+                        <Link to={"/"}>Return Home</Link>
+                    </motion.button>
+
             </section>
         );
     }
