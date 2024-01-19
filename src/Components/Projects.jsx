@@ -28,7 +28,9 @@ const Projects = () => {
                      {
                          ProjectList.map((item,i)=>{
                              return(
-                                 <Link className={"transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:shadow"} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} key={i} to={`/details/${item['_id']}`}>
+                                 <Link key={i} to={`/details/${item['_id']}`}
+                                     className={"transition transform hover:-translate-y-2 " +
+                                         "motion-reduce:transition-none motion-reduce:hover:transform-none hover:shadow"} >
                                      <figure  className="relative h-64 md:h-96 lg:h-96 w-full">
                                          <img
                                              className="h-full w-full rounded-xl object-cover object-center"
