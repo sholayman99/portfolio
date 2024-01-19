@@ -3,6 +3,7 @@ import {motion} from "framer-motion";
 import ProjectStore from "../Store/ProjectStore.js";
 import {Typography} from "@material-tailwind/react";
 import {Link} from "react-router-dom"
+import ProjectSkeleton from "../Skeleton/ProjectSkeleton.jsx";
 
 
 const Projects = () => {
@@ -10,7 +11,7 @@ const Projects = () => {
     const {ProjectList} = ProjectStore();
 
     if(ProjectList===null){
-        return <h2> Loading.... </h2>
+        return <ProjectSkeleton />
     }else{
         return (
             <section id={"projects"} className={"lg:py-24 py-8 flex  items-center justify-center px-6  flex-col gap-4 "}>
@@ -22,7 +23,7 @@ const Projects = () => {
                         find some of the personal and clients projects that I created with each project containing
                         its own case study.</p>
                 </div>
-                 <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeIn"}} whileInView={{y:0}}
+                 <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
                              className={"lg:py-20 py-10 grid lg:grid-cols-2 grid-cols-1 gap-5"}>
                      {
                          ProjectList.map((item,i)=>{
