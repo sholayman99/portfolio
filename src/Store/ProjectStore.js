@@ -1,5 +1,7 @@
 import {create} from "zustand";
 import axios from "axios";
+import {Toaster} from "react-hot-toast";
+import React from "react";
 
 
 const ProjectStore = create((set)=>({
@@ -17,6 +19,14 @@ const ProjectStore = create((set)=>({
         let data = await res['data'];
         if(data['status']==="success"){
             set({SingleProject:data['data']});
+        }
+    },
+    SendEmail:null,
+    SendEmailRequest:async(body)=>{
+        let res = await axios.post(`http://localhost:5050/api/v1/SendEmail`,body);
+        let data = await res['data'];
+        if(data['status']==="success"){
+            set({SingleProject:data});
         }
     }
 }))

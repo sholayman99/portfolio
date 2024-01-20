@@ -1,20 +1,21 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect} from 'react';
 import AppNavbar from "../Components/AppNavbar.jsx";
 import Header from "../Components/Header.jsx";
 import About from "../Components/About.jsx";
 import Projects from "../Components/Projects.jsx";
 import ProjectStore from "../Store/ProjectStore.js";
-import Contact from "../Components/Contact.jsx";
+import ContactForm from "../Components/ContactForm.jsx";
 
 
 
 const HomePage = () => {
 
-    const {ProjectListRequest} = ProjectStore()
+    const {ProjectListRequest,SendEmailRequest} = ProjectStore()
 
     useEffect(() => {
         (async()=>{
             await ProjectListRequest()
+
         })()
     }, []);
 
@@ -25,7 +26,7 @@ const HomePage = () => {
             <Header />
             <About />
             <Projects />
-            <Contact />
+            <ContactForm />
 
         </>
 
