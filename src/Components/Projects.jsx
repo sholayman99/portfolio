@@ -24,7 +24,7 @@ const Projects = () => {
                         its own case study.</p>
                 </div>
                  <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
-                             className={"lg:py-20 py-10 grid lg:grid-cols-2 grid-cols-1 gap-5"}>
+                             className={"lg:py-20 py-10 lg:px-5 md:px-5 grid lg:grid-cols-2 grid-cols-1 gap-8"}>
                      {
                          ProjectList.slice(0,4).map((item,i)=>{
                              return(

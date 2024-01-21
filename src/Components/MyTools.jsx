@@ -30,9 +30,9 @@ const MyTools = () => {
 
     return (
         <div>
-            <h3 className={"lg:text-2xl md:text-2xl text-xl"}>Tools I Use Everyday</h3>
+            <h3 className={"lg:text-2xl text-xl"}>Tools I Use Everyday</h3>
             <div className={"w-full h-0.5 rounded-xl my-5 bg-gray-700"}></div>
-          <div className={"grid lg:grid-cols-6 md:grid-cols-6 grid-cols-3 gap-10"}>
+          <div className={"grid lg:grid-cols-6 grid-cols-3 gap-10"}>
               {
                   tools?.map((image,i) =>{
                       return(

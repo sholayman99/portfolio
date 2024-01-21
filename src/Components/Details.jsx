@@ -42,18 +42,19 @@ const Details = () => {
                <div className={"w-[70%] md:w-full lg:w-full"}>
                    <ProjectImages />
                </div>
-                   <div className={"bg-white w-[70%] lg:w-full md:w-full mx-auto bg-opacity-5 lg:p-10 p-5 flex flex-col gap-6 lg:gap-10"}>
+                   <div className={"bg-white w-[70%] lg:w-full md:w-full mx-auto bg-opacity-5 lg:p-10 p-5 flex " +
+                       "flex-col gap-6 lg:gap-10 rounded-xl"}>
                        <div className={"flex flex-col lg:gap-5 gap-3"}>
                            <h2 className={"lg:text-3xl md:text-2xl text-xl text-gray-200 font-medium font-roboto"}>Project Overview:</h2>
                            <p className={"text-gray-400 md:text-[15px] text-xs lg:text-lg"}>{SingleProject['overview']}</p>
                        </div>
                        <div className={"flex flex-col lg:gap-5 gap-3"}>
                            <h2 className={"lg:text-3xl md:text-2xl text-xl text-gray-200 font-medium font-roboto"}>Tools Used:</h2>
-                           <div className={"grid lg:grid-cols-8 md:grid-cols-6 grid-cols-4 md:text-[15px] text-xs lg:text-lg gap-5"}>
+                           <div className={"grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 md:text-[15px] text-xs lg:text-lg gap-5"}>
                                {
                                    SingleProject['tools'].split(",").map((item,i)=>{
                                        return(
-                                           <button className={"bg-white bg-opacity-10 px-1 py-1.5  rounded-lg"} key={i}>{item}</button>
+                                           <button className={"bg-white bg-opacity-10 p-2 rounded-lg"} key={i}>{item}</button>
                                        )
                                    })
                                }

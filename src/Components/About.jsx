@@ -4,12 +4,12 @@ import MyTools from "./MyTools.jsx";
 import FreeLanceClients from "./FreeLanceClients.jsx";
 
 const About = () => {
-    let skills ="HTML,CSS,JavaScript,React.js,Node.js,express.js,MongoDB,Mongoose,Git,GitHub," +
-        "Tailwind CSS,Bootstrap,zustand,React-Redux Basic,firebase"
+    let skills ="HTML,CSS,Git,GitHub,JavaScript,React.js,Node.js,express.js,MongoDB,Mongoose,Zustand," +
+        "Firebase,Tailwind CSS,Bootstrap,Redux Basic"
 
 
     return (
-        <section id={"about"} className={"lg:py-20 md:py-14 py-8 flex  items-center justify-center px-10  flex-col gap-4 "}>
+        <section id={"about"} className={"lg:py-20 md:py-14 py-8 flex  items-center justify-center px-8  flex-col gap-4 "}>
            <div className={"flex items-center justify-center lg:w-[60%]  flex-col gap-4 lg:gap-6"}>
                <motion.h2 initial={{x:-200}}   transition={{ duration: 1.3,ease:"easeOut"}} whileInView={{x:0}}
                           className={"title-text lg:text-4xl md:text-4xl text-2xl"}>ABOUT ME</motion.h2>
@@ -18,13 +18,13 @@ const About = () => {
                    find more information about me, what I do, and my current skills mostly in terms of
                    programming and technology</p>
            </div>
-            <div  className={"grid grid-cols-1 lg:grid-cols-2 lg:py-20 md:py-16 py-10" +
-                " lg:gap-16 md:gap-16 gap-10"}>
+            <div  className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:py-20 md:py-16 py-10" +
+                " lg:gap-16 gap-10"}>
                 <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
                             >
-                    <h3 className={"lg:text-2xl md:text-2xl text-xl"}>Get to know me!</h3>
+                    <h3 className={"lg:text-2xl text-xl"}>Get to know me!</h3>
                     <div className={"w-full h-0.5 rounded-xl my-5 bg-gray-700"}></div>
-                    <p className={"text-gray-400 font-[300] text-justify lg:text-lg md:text-[17px] text-sm"}>
+                    <p className={"text-gray-400 font-[300] text-justify lg:text-lg md:text-[15px] text-sm"}>
                         I'm a <span className={"text-white font-[500]"}>Mern-stack </span>
                         Web Developer building the  <span className={"text-white font-[500]"}>Full-stack </span>
                         Websites and Web Applications that leads to the success of the overall product.
@@ -38,12 +38,12 @@ const About = () => {
                         If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
                 </motion.div>
                 <motion.div initial={{y:120}}  transition={{ duration: 1.2 ,ease:"easeOut"}} whileInView={{y:0}}>
-                    <h3 className={"lg:text-2xl md:text-2xl text-xl"}>My Skills</h3>
+                    <h3 className={"lg:text-2xl text-xl"}>My Skills</h3>
                     <div className={"w-full h-0.5 rounded-xl my-5 bg-gray-700"}></div>
-                    <div className={"grid lg:md:grid-cols-4 md:grid-cols-7 grid-cols-3 gap-3"}>
+                    <div className={"grid lg:md:grid-cols-4 grid-cols-3 gap-3"}>
                         {
                             skills.split(",").map((item,i)=>{
-                                return <button className={"bg-white  lg:text-lg md:text-md text-sm px-2 rounded-lg bg-opacity-5  h-14 "} key={i}>{item}</button>
+                                return <button className={"bg-white  lg:text-lg md:text-md text-sm p-2 rounded-lg bg-opacity-5  "} key={i}>{item}</button>
                             })
                         }
                     </div>
