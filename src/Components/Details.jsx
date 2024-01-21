@@ -18,7 +18,7 @@ const Details = () => {
                 " gap-10 md:gap-16 lg:gap-20"}>
                <div className={"flex flex-col items-center justify-center lg:py-10 lg:w-[70%] gap-8 lg:gap-10" +
                    " md:gap-10 rounded-xl"}>
-                   <h1 className={"lg:text-5xl md:text-4xl text-2xl font-genos  font-bold"}>
+                   <h1 className={"lg:text-5xl md:text-4xl text-2xl font-railway  font-bold"}>
                        {SingleProject['title']}
                    </h1>
                    <div className={"w-10 h-0.5 rounded-xl bg-[#ffffff]"}></div>
@@ -36,7 +36,7 @@ const Details = () => {
                        <a target={'_blank'} href={SingleProject['gitLink']}>GitHub Link</a>
                    </motion.button>
                </div>
-                <div className={"bg-gray-400 h-[1px] w-full rounded-xl"}></div>
+                <div className={"bg-gray-700 h-0.5 w-full rounded-xl"}></div>
                <div className={"flex flex-col justify-center items-center md:gap-16 gap-10 lg:gap-20"}>
 
                <div className={"w-[70%] md:w-full lg:w-full"}>

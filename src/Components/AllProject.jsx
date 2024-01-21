@@ -11,14 +11,19 @@ const AllProject = () => {
         return <ProjectSkeleton />
     }else{
         return (
-            <section className={"text-center lg:p-16 md:p-10 p-8 "}>
-               <div className={"flex flex-col lg:gap-12 md:gap-10 gap-8"}>
-                   <h2 className={"lg:text-5xl md:text-4xl text-2xl font-semibold font-genos"}>All Project</h2>
-                   <p className={"lg:text-lg md:text-[15.5px] font-light text-sm text-gray-200"}>
-                       This page contains all the projects that i've completed so far.
-                   </p>
-                   <div className={"w-full h-[0.5px] bg-gray-400"}></div>
+            <section className={"text-center lg:p-20 md:p-16 p-8 "}>
+               <div className={"flex flex-col items-center lg:gap-12 md:gap-10 gap-8"}>
+                   <div className={"lg:w-[70%] "}>
+                       <h2 className={"lg:text-4xl md:text-3xl text-2xl font-semibold font-railway"}>All Projects</h2>
+                       <p className={"lg:text-lg md:text-[15.5px] mt-3 font-light text-sm text-gray-200"}>
+                           This page contains all the projects that i've completed so far.Visit the Details page to
+                           know more about these projects
+                       </p>
+
+                   </div>
+                   <div className={"w-full h-0.5 bg-gray-700"}></div>
                </div>
+
                 <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
                             className={"lg:py-20 py-10 grid lg:grid-cols-2 gap-5"}>
                     {

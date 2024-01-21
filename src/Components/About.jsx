@@ -1,24 +1,29 @@
 import React from 'react';
 import {motion} from "framer-motion"
+import MyTools from "./MyTools.jsx";
+import FreeLanceClients from "./FreeLanceClients.jsx";
 
 const About = () => {
     let skills ="HTML,CSS,JavaScript,React.js,Node.js,express.js,MongoDB,Mongoose,Git,GitHub," +
-        "Tailwind CSS,Bootstrap,zustand,React-Redux Basic"
+        "Tailwind CSS,Bootstrap,zustand,React-Redux Basic,firebase"
+
+
     return (
         <section id={"about"} className={"lg:py-20 md:py-14 py-8 flex  items-center justify-center px-10  flex-col gap-4 "}>
            <div className={"flex items-center justify-center lg:w-[60%]  flex-col gap-4 lg:gap-6"}>
                <motion.h2 initial={{x:-200}}   transition={{ duration: 1.3,ease:"easeOut"}} whileInView={{x:0}}
                           className={"title-text lg:text-4xl md:text-4xl text-2xl"}>ABOUT ME</motion.h2>
                <div className={"w-10 h-0.5 rounded-xl bg-[#ffffff]"}></div>
-               <p className={"text-gray-400 font-[400] text-center lg:text-xl md:text-lg text-sm"}>Here you will find some
-                   of the personal and clients projects that I created with each project containing its own case study</p>
+               <p className={"text-gray-400 font-[400] text-center lg:text-xl md:text-lg text-sm"}>Here you will
+                   find more information about me, what I do, and my current skills mostly in terms of
+                   programming and technology</p>
            </div>
-            <div  className={"flex lg:flex-row flex-col justify-between items-center lg:py-20 md:py-16 py-10" +
+            <div  className={"grid grid-cols-1 lg:grid-cols-2 lg:py-20 md:py-16 py-10" +
                 " lg:gap-16 md:gap-16 gap-10"}>
                 <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
-                            className={"lg:max-w-[50%]"}>
+                            >
                     <h3 className={"lg:text-2xl md:text-2xl text-xl"}>Get to know me!</h3>
-                    <div className={"w-full h-[1px] rounded-xl my-5 bg-gray-600"}></div>
+                    <div className={"w-full h-0.5 rounded-xl my-5 bg-gray-700"}></div>
                     <p className={"text-gray-400 font-[300] text-justify lg:text-lg md:text-[17px] text-sm"}>
                         I'm a <span className={"text-white font-[500]"}>Mern-stack </span>
                         Web Developer building the  <span className={"text-white font-[500]"}>Full-stack </span>
@@ -34,7 +39,7 @@ const About = () => {
                 </motion.div>
                 <motion.div initial={{y:120}}  transition={{ duration: 1.2 ,ease:"easeOut"}} whileInView={{y:0}}>
                     <h3 className={"lg:text-2xl md:text-2xl text-xl"}>My Skills</h3>
-                    <div className={"w-full h-[1px] rounded-xl my-5 bg-gray-600"}></div>
+                    <div className={"w-full h-0.5 rounded-xl my-5 bg-gray-700"}></div>
                     <div className={"grid lg:md:grid-cols-4 md:grid-cols-7 grid-cols-3 gap-3"}>
                         {
                             skills.split(",").map((item,i)=>{
@@ -43,6 +48,13 @@ const About = () => {
                         }
                     </div>
                 </motion.div>
+                <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}>
+                    <MyTools />
+                </motion.div>
+                <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}>
+                    <FreeLanceClients />
+                </motion.div>
+
             </div>
         </section>
     );
