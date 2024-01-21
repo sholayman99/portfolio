@@ -27,8 +27,8 @@ const ContactForm = () => {
     };
 
   return (
-    <section id={"contact"} className={"lg:py-24 md:py-16 py-8 flex  items-center justify-center px-6 " +
-        " flex-col gap-4 "}>
+    <section id={"contact"} className={"lg:py-24 md:py-16 py-8 flex  items-center justify-center px-2 lg:px-10 " +
+        "md:px-8 flex-col gap-4 "}>
       <div
         className={
           "flex items-center justify-center lg:w-[60%] lg:py-20 py-8 md:py-16 flex-col gap-4 lg:gap-6"}>
@@ -57,7 +57,7 @@ const ContactForm = () => {
         transition={{ duration: 1.2, ease: "easeOut" }}
         whileInView={{ y: 0 }}
         className={
-          "bg-white bg-opacity-10  rounded-xl  lg:w-[75%] w-full md:p-14 p-8 lg:p-20 flex flex-col gap-10"
+          "bg-white bg-opacity-10 rounded-xl lg:w-[75%] w-full md:p-14 p-8 lg:p-20 flex flex-col gap-10"
         }
       >
          <div>

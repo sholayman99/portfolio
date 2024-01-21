@@ -15,7 +15,7 @@ const ProjectImages = () => {
 
     ]
     return (
-        <div>
+        <div >
             <ImageGallery autoplay={true} items={images} />
         </div>
     );

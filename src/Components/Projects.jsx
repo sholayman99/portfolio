@@ -26,7 +26,7 @@ const Projects = () => {
                  <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
                              className={"lg:py-20 py-10 grid lg:grid-cols-2 grid-cols-1 gap-5"}>
                      {
-                         ProjectList.map((item,i)=>{
+                         ProjectList.slice(0,4).map((item,i)=>{
                              return(
                                  <Link key={i} to={`/details/${item['_id']}`}
                                      className={"transition transform hover:-translate-y-2 " +
@@ -53,6 +53,13 @@ const Projects = () => {
                          })
                      }
                  </motion.div>
+                <motion.button className={"hover:bg-opacity-20 bg-white bg-opacity-5 font-bold " +
+                    "lg:px-10 lg:text-lg md:text-[15px] text-[12px] md:px-8 md:py-4 px-6 py-3 lg:py-4 rounded-xl uppercase"}
+                               whileHover={{ scale: 1.1 }}
+                               whileTap={{ scale: 0.9 }}
+                               transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+                    <Link to={"/all-projects"}>Show All</Link>
+                </motion.button>
             </section>
         );
     }

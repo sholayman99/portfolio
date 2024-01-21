@@ -22,7 +22,7 @@ const Header = () => {
                    ]}
                    wrapper="span"
                    speed={40}
-                   className={"lg:text-[2.5em] md:text-[2em] text-[1.3em] inline-block text-base"}
+                   className={"lg:text-[2.5em] md:text-[2em] text-[1.4em] inline-block text-base"}
                    repeat={Infinity}
                />
 

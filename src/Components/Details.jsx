@@ -4,7 +4,7 @@ import DetailSkeleton from "../Skeleton/DetailSkeleton.jsx";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from "react-image-gallery";
 import ProjectImages from "./ProjectImages.jsx";
-import {Link} from "react-router-dom";
+import {HashLink as Link} from "react-router-hash-link";
 import {motion} from "framer-motion"
 
 const Details = () => {
@@ -14,19 +14,22 @@ const Details = () => {
         return <DetailSkeleton />
     }else{
         return (
-            <section className={"py-14 lg:px-14 md:px-10 px-5  flex flex-col items-center gap-10 md:gap-16 lg:gap-20"}>
-               <div className={"flex flex-col items-center justify-center lg:py-10 lg:w-[70%] gap-8 lg:gap-10 md:gap-10 rounded-xl"}>
+            <section className={"py-14 lg:px-14 overflow-hidden md:px-10 px-5  flex flex-col items-center" +
+                " gap-10 md:gap-16 lg:gap-20"}>
+               <div className={"flex flex-col items-center justify-center lg:py-10 lg:w-[70%] gap-8 lg:gap-10" +
+                   " md:gap-10 rounded-xl"}>
                    <h1 className={"lg:text-5xl md:text-4xl text-2xl font-genos  font-bold"}>
                        {SingleProject['title']}
                    </h1>
                    <div className={"w-10 h-0.5 rounded-xl bg-[#ffffff]"}></div>
-                   <p className={"lg:text-lg md:text-[15.5px] text-sm text-gray-200"}>
+                   <p className={"lg:text-lg md:text-[15.5px] font-light text-sm text-gray-200"}>
                        This page contains the case study of
                        <span className={"font-[500]"}> {SingleProject['title']} </span>which includes the Project
-                       Overview, Tools Used and Live Links to the official product.
+                       Overview, Tools Used , Github Link and Live Link to the official product.
                    </p>
-                   <motion.button className={"hover:bg-gray-200 bg-white bg-opacity-10 hover:text-black font-bold " +
-                       "lg:px-10 lg:text-xl md:text-[16px] text-[13px] md:px-8 md:py-4 px-6 py-3 lg:py-4 rounded-xl uppercase"}
+                   <motion.button className={"hover:bg-opacity-20 bg-white bg-opacity-5"+
+                       " font-bold lg:px-10 lg:text-lg md:text-[15px] text-[12px] md:px-8 md:py-4 px-6 py-3 " +
+                       "lg:py-4 rounded-xl uppercase"}
                              whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             transition={{ type: "spring", stiffness: 400, damping: 17 }}>
@@ -36,7 +39,7 @@ const Details = () => {
                 <div className={"bg-gray-400 h-[1px] w-full rounded-xl"}></div>
                <div className={"flex flex-col justify-center items-center md:gap-16 gap-10 lg:gap-20"}>
 
-               <div className={"w-[70%] lg:w-full md:w-full mx-auto"}>
+               <div className={"w-[70%] md:w-full lg:w-full"}>
                    <ProjectImages />
                </div>
                    <div className={"bg-white w-[70%] lg:w-full md:w-full mx-auto bg-opacity-5 lg:p-10 p-5 flex flex-col gap-6 lg:gap-10"}>
@@ -59,13 +62,14 @@ const Details = () => {
                    </div>
                </div>
 
-                    <motion.button className={"hover:bg-gray-200 bg-white bg-opacity-10 hover:text-black font-bold " +
-                        "lg:px-10 lg:text-lg md:text-[16px] text-[13px] md:px-8 md:py-4 px-6 py-3 lg:py-4 rounded-xl uppercase"}
-                                   whileHover={{ scale: 1.1 }}
-                                   whileTap={{ scale: 0.9 }}
-                                   transition={{ type: "spring", stiffness: 400, damping: 17 }}>
-                        <Link to={"/"}>Return Home</Link>
-                    </motion.button>
+                <motion.button className={"hover:bg-opacity-20 bg-white bg-opacity-5 font-bold " +
+                    "lg:px-10 lg:text-lg md:text-[15px] text-[12px] md:px-8 md:py-4 px-6 py-3 lg:py-4 " +
+                    "rounded-xl uppercase"}
+                               whileHover={{ scale: 1.1 }}
+                               whileTap={{ scale: 0.9 }}
+                               transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+                    <Link to={"/"}>Return Home</Link>
+                </motion.button>
 
             </section>
         );
