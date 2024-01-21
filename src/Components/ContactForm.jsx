@@ -8,14 +8,12 @@ import * as emailjs from "@emailjs/browser";
 const ContactForm = () => {
     const form = useRef();
 
-
-
-
     const sendEmail = async(e) => {
         e.preventDefault();
 
-
-     let serID="service_28zjekj"; let pbKey="template_f7wmfee";let tempKey="ucZWwsP_PL0klx1C6"
+     let serID="service_28zjekj";
+     let pbKey="template_f7wmfee";
+     let tempKey="ucZWwsP_PL0klx1C6"
        await emailjs.sendForm(serID,tempKey,form.current,pbKey)
             .then((result) => {
                 console.log(result.text);
@@ -77,9 +75,9 @@ const ContactForm = () => {
          </div>
           <motion.input type={"submit"} value={"Submit"}
           className={
-            "hover:bg-white lg:w-[25%] md:w-[25%] w-[40%]  bg-opacity-15 text-white hover:text-black border" +
+            "bg-white lg:w-[25%] md:w-[25%] w-[40%] bg-opacity-5 hover:bg-opacity-15 text-white border " +
             " font-bold lg:px-8 lg:text-md md:text-sm text-[12px] md:px-8 md:py-4 px-6 py-3 lg:py-5 rounded-xl" +
-            " uppercase"
+            " uppercase cursor-pointer"
           }
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}

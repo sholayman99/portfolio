@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import HomePage from "./Pages/HomePage.jsx";
 import About from "./Components/About.jsx";
 import DetailPage from "./Pages/DetailPage.jsx";
-import AllProjectsPage from "./Pages/AllProjectsPage.jsx";
+import AllProjectPage from "./Pages/AllProjectPage.jsx";
 
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
                 <Routes>
                     <Route path={"/"} element={ <HomePage /> } />
                     <Route path={"/details/:id"} element={ <DetailPage/> } />
-                    <Route path={"/all-projects"} element={ <AllProjectsPage/> } />
+                    <Route path={"/all-project"} element={ <AllProjectPage/> } />
                 </Routes>
             </BrowserRouter>
         </div>

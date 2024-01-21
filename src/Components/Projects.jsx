@@ -58,7 +58,7 @@ const Projects = () => {
                                whileHover={{ scale: 1.1 }}
                                whileTap={{ scale: 0.9 }}
                                transition={{ type: "spring", stiffness: 400, damping: 17 }}>
-                    <Link to={"/all-projects"}>Show All</Link>
+                    <Link to={"/all-project"}>Show All</Link>
                 </motion.button>
             </section>
         );
