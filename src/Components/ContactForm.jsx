@@ -6,7 +6,7 @@ import ProjectStore from "../Store/ProjectStore.js";
 import * as emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-    const form = useRef();
+    let form = useRef();
 
     const sendEmail = async(e) => {
         e.preventDefault();
@@ -18,14 +18,16 @@ const ContactForm = () => {
             .then((result) => {
                 console.log(result.text);
                 toast.success('Send successfully')
+
             }, (error) => {
                 console.log(error.text);
                 toast.error('Failed Attempt');
+
             });
     };
 
   return (
-    <section id={"contact"} className={"lg:py-24 md:py-16 py-8 flex  items-center justify-center px-2 lg:px-10 " +
+    <section id={"contact"} className={"lg:py-10 md:py-14 py-8 flex  items-center justify-center px-2 lg:px-10 " +
         "md:px-8 flex-col gap-4 "}>
       <div
         className={
@@ -85,7 +87,7 @@ const ContactForm = () => {
         />
 
       </motion.form>
-      <Toaster position="top-center" reverseOrder={false} gutter={8}  toastOptions={{duration: 3000}} />
+      <Toaster position="bottom-center" reverseOrder={false} gutter={6}  toastOptions={{duration: 3000}} />
     </section>
   );
 };

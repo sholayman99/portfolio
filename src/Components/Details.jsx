@@ -14,7 +14,7 @@ const Details = () => {
         return <DetailSkeleton />
     }else{
         return (
-            <section className={"py-14 lg:px-14 overflow-hidden md:px-10 px-5  flex flex-col items-center" +
+            <section className={"lg:py-20 md:py-14 py-8 lg:px-14 overflow-hidden md:px-10 px-5  flex flex-col items-center" +
                 " gap-10 md:gap-16 lg:gap-20"}>
                <div className={"flex flex-col items-center justify-center lg:py-10 lg:w-[70%] gap-8 lg:gap-10" +
                    " md:gap-10 rounded-xl"}>
