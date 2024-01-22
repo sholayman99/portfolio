@@ -6,6 +6,7 @@ import Projects from "../Components/Projects.jsx";
 import ProjectStore from "../Store/ProjectStore.js";
 import ContactForm from "../Components/ContactForm.jsx";
 import Services from "../Components/Services.jsx";
+import Footer from "../Components/Footer.jsx";
 
 
 
@@ -29,6 +30,7 @@ const HomePage = () => {
             <Projects />
             <Services />
             <ContactForm />
+            <Footer />
 
         </>
 
