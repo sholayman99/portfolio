@@ -4,6 +4,7 @@ import HomePage from "./Pages/HomePage.jsx";
 import About from "./Components/About.jsx";
 import DetailPage from "./Pages/DetailPage.jsx";
 import AllProjectPage from "./Pages/AllProjectPage.jsx";
+import NotFoundPage from "./Pages/NotFoundPage.jsx";
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
                     <Route path={"/"} element={ <HomePage /> } />
                     <Route path={"/details/:id"} element={ <DetailPage/> } />
                     <Route path={"/all-project"} element={ <AllProjectPage/> } />
+                    <Route path={"*"} element={ <NotFoundPage/> } />
                 </Routes>
             </BrowserRouter>
         </div>
