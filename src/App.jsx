@@ -10,7 +10,7 @@ import NotFoundPage from "./Pages/NotFoundPage.jsx";
 const App = () => {
 
     return (
-        <div className={"bg-[#141A2A] font-roboto max-w-screen-2xl mx-auto text-[#ffffff]"}>
+        <div className={"bg-[#141A2A] font-roboto max-w-screen-2xl mx-auto text-gray-200"}>
             <BrowserRouter>
                 <Routes>
                     <Route path={"/"} element={ <HomePage /> } />

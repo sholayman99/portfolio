@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 
 const SocialLink = () => {
     return (
-        <div className={"fixed top-72 right-0 z-50 rounded-tl-lg rounded-bl-lg  bg-gray-100 shadow-xl text-black" +
+        <div className={"fixed top-72 z-50 rounded-tr-lg rounded-br-lg  bg-gray-100 shadow-xl text-black" +
             " lg:w-16 md:w-14 w-10 lg:py-5 md:py-5 py-3 flex flex-col lg:gap-8 md:gap-6 gap-4 items-center " +
             "justify-center"}>
             <motion.a   whileHover={{ scale: 1.2 }}

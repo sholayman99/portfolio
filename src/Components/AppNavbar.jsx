@@ -1,6 +1,9 @@
 import React from "react";
-import {Navbar, MobileNav, Typography, IconButton,} from "@material-tailwind/react";
+import {Navbar, MobileNav, Typography, IconButton, Button,} from "@material-tailwind/react";
 import {HashLink as NavLink} from "react-router-hash-link";
+import {Link} from "react-router-dom";
+import resume from "../assets/Md. Sholayman Resume.pdf"
+import {motion} from "framer-motion"
 
 
 const AppNavbar =()=> {
@@ -69,6 +72,25 @@ const AppNavbar =()=> {
 
                 <NavLink to="#contact" smooth className="flex items-center"> Contact </NavLink>
             </Typography>
+            <Typography as="li" variant="medium"
+                        className="flex items-center gap-x-2 p-1 font-medium" >
+
+                <motion.a whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.9 }}
+                          transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                          href={resume} download target={"_blank"}
+                      className="flex bg-white text-black items-center cursor-pointer py-1.5 px-2 rounded-xl gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         fill="none" viewBox="0 0 24 24"
+                         strokeWidth="1.5" stroke="currentColor"
+                         className="w-4 h-4">
+                        <path strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  Resume
+                </motion.a>
+            </Typography>
 
 
 
@@ -76,9 +98,9 @@ const AppNavbar =()=> {
     );
 
     return (
-        <Navbar className="mx-auto bg-[#111827] border-none z-50 fixed top-0 m-0 shadow-lg font-roboto px-4 py-2 lg:px-8 lg:py-4">
+        <Navbar className="mx-auto bg-[#111827] border-none z-50 fixed top-0 m-0 shadow-lg font-roboto py-2 lg:py-4">
             <div className="container mx-auto flex flex-wrap items-center lg:justify-between ">
-                <Typography className="mr-4 text-2xl font-semibold cursor-pointer py-1.5">
+                <Typography className=" text-2xl font-semibold cursor-pointer py-1.5">
                    <NavLink to={"#"} smooth> Md.Sholayman</NavLink>
                 </Typography>
                 <div className="hidden lg:block">{navList}</div>

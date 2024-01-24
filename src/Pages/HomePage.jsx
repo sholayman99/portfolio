@@ -12,11 +12,12 @@ import Footer from "../Components/Footer.jsx";
 
 const HomePage = () => {
 
-    const {ProjectListRequest,SendEmailRequest} = ProjectStore()
+    const {ProjectListRequest,ToolsListRequest} = ProjectStore()
 
     useEffect(() => {
         (async()=>{
-            await ProjectListRequest()
+            await ProjectListRequest();
+            await ToolsListRequest();
 
         })()
     }, []);

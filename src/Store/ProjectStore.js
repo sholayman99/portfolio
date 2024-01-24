@@ -21,14 +21,16 @@ const ProjectStore = create((set)=>({
             set({SingleProject:data['data']});
         }
     },
-    SendEmail:null,
-    SendEmailRequest:async(body)=>{
-        let res = await axios.post(`http://localhost:5050/api/v1/SendEmail`,body);
+
+    ToolsList :null,
+    ToolsListRequest : async ()=>{
+        let res = await axios.get("http://localhost:5050/api/v1/FindTools");
         let data = await res['data'];
         if(data['status']==="success"){
-            set({SingleProject:data});
+            set({ToolsList:data['data']});
         }
-    }
+    },
+
 }))
 
 export default ProjectStore;

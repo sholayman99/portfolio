@@ -4,7 +4,7 @@ import {BsCodeSlash} from "react-icons/bs";
 import {MdClass} from "react-icons/md";
 
 const Services = () => {
-    const datas = [
+    const data = [
         {
             icon: <BsCodeSlash />,
             title: "Website Development",
@@ -29,14 +29,14 @@ const Services = () => {
             <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
                         className={"flex lg:flex-row flex-col items-center justify-around gap-10 md:p-20 lg:p-10"}>
                 {
-                    datas?.map((item,i)=>{
+                    data?.map((item,i)=>{
                         return(
-                            <div key={i} className={"bg-white bg-opacity-5 rounded-xl lg:p-10 md:p-10 p-6"}>
+                            <div key={i} className={"bg-white bg-opacity-5 rounded-xl m-5 p-6"}>
                               <h2 className="w-fit p-[10px] lg:text-4xl text-xl md:text-3xl rounded-full border-[#fff] border-[2px]
                               text-[#fff]">{item?.icon}</h2>
                                <div className={"py-5"}>
-                               <h2 className={"lg:text-3xl md:text-2xl text-lg font-railway "}>{item?.title}</h2>
-                               <p className={"lg:text-lg md:text-lg text-sm  text-gray-300 pt-3"}>{item?.desc}</p>
+                               <h2 className={"lg:text-2xl md:text-2xl text-lg font-railway "}>{item?.title}</h2>
+                               <p className={"lg:text-[16px] md:text-[16px] text-sm  text-gray-300 pt-3"}>{item?.desc}</p>
                                </div>
                             </div>
                         )
