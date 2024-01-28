@@ -2,10 +2,9 @@ import React from 'react';
 import ProjectStore from "../Store/ProjectStore.js";
 import DetailSkeleton from "../Skeleton/DetailSkeleton.jsx";
 import "react-image-gallery/styles/css/image-gallery.css";
-import ImageGallery from "react-image-gallery";
 import ProjectImages from "./ProjectImages.jsx";
-import {HashLink as Link} from "react-router-hash-link";
 import {motion} from "framer-motion"
+import {Link} from "react-router-dom";
 
 const Details = () => {
     const {SingleProject} = ProjectStore();
@@ -18,12 +17,14 @@ const Details = () => {
                 " gap-10 md:gap-16 lg:gap-20"}>
                <div className={"flex flex-col items-center justify-center lg:py-10 lg:w-[70%] gap-8 lg:gap-10" +
                    " md:gap-10 rounded-xl"}>
-                   <motion.h1 initial={{y:-140}}   transition={{ duration: 1.3,ease:"easeOut"}} whileInView={{y:0}}
+                   <motion.h1 initial={{x:200}}   transition={{ duration: 1.3,ease:"easeOut"}}
+                              whileInView={{x:0}}
                        className={"lg:text-5xl md:text-4xl text-2xl font-railway  font-bold"}>
                        {SingleProject['title']}
                    </motion.h1>
                    <div className={"w-10 h-0.5 rounded-xl bg-[#ffffff]"}></div>
-                   <motion.p initial={{x:-200}}   transition={{ duration: 1.3,ease:"easeOut"}} whileInView={{x:0}}
+                   <motion.p initial={{x:-200}}   transition={{ duration: 1.3,ease:"easeOut"}}
+                             whileInView={{x:0}}
                        className={"lg:text-lg md:text-[15.5px] font-light text-sm text-gray-200"}>
                        This page contains the case study of
                        <span className={"font-[500]"}> {SingleProject['title']} </span>which includes the Project
