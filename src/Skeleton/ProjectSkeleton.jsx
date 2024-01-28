@@ -19,6 +19,7 @@ const ProjectSkeleton = () => {
                                 Array.from({length:10}).map((i)=>{
                                     return(
                                         <Typography
+                                             key={i}
                                             as="div"
                                             variant="paragraph"
                                             className="mb-2 h-2  rounded-full bg-gray-300"

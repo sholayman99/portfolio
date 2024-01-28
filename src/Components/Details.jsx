@@ -1,7 +1,6 @@
 import React from 'react';
 import ProjectStore from "../Store/ProjectStore.js";
 import DetailSkeleton from "../Skeleton/DetailSkeleton.jsx";
-import "react-image-gallery/styles/css/image-gallery.css";
 import ProjectImages from "./ProjectImages.jsx";
 import {motion} from "framer-motion"
 import {Link} from "react-router-dom";

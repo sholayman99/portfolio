@@ -32,15 +32,15 @@ const ContactForm = () => {
            <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
                className={"bg-black lg:w-[60%] bg-opacity-10 px-10 py-10 rounded-xl"}>
                <form ref={form} onSubmit={sendEmail} className={""}>
-                   <label className={"text-gray-700"} htmlFor={"from_name"}>Name</label>
+                   <label className={"text-gray-700"} htmlFor={"name"}>Name</label>
                    <input className={"w-full border-b focus:border-b-2 p-2 bg-transparent outline-none " +
-                       "  text-md text-gray-300 mb-7 "} type="text" name="from_name" placeholder={"Your Name"} />
-                   <label className={"text-gray-700 "} htmlFor={"from_email"}>Email</label>
+                       "  text-md text-gray-300 mb-7 "} type="text" id={"name"} name="from_name" placeholder={"Your Name"} />
+                   <label className={"text-gray-700 "} htmlFor={"email"}>Email</label>
                    <input className={"w-full border-b focus:border-b-2 p-2 bg-transparent outline-none " +
-                       "  text-md text-gray-300 mb-7 "} type="email" name="from_email" placeholder={"Your Email"} />
+                       "  text-md text-gray-300 mb-7 "} type="email" id={"email"} name="from_email" placeholder={"Your Email"} />
                    <label className={"text-gray-700"} htmlFor={"message"}>Message</label>
                    <textarea className={"w-full border-b focus:border-b-2 p-2 bg-transparent outline-none " +
-                       " text-md text-gray-300 resize-none"} name="message" placeholder={"Your Message"} />
+                       " text-md text-gray-300 resize-none"} id={"message"} name="message" placeholder={"Your Message"} />
                    <motion.input whileHover={{ scale: 1.1 }}
                                  whileTap={{ scale: 0.9 }}
                                  transition={{ type: "spring", stiffness: 400, damping: 17 }}

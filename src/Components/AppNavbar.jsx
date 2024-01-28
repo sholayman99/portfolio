@@ -1,7 +1,6 @@
 import React from "react";
-import {Navbar, MobileNav, Typography, IconButton, Button,} from "@material-tailwind/react";
+import {Navbar, MobileNav, Typography, IconButton, } from "@material-tailwind/react";
 import {HashLink as NavLink} from "react-router-hash-link";
-import {Link} from "react-router-dom";
 import resume from "../assets/Md. Sholayman Resume.pdf"
 import {motion} from "framer-motion"
 
@@ -18,7 +17,7 @@ const AppNavbar =()=> {
 
     const navList = (
         <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <Typography as="li" variant="medium"
+            <Typography as="li" variant="h6"
                         className="flex items-center gap-x-2 p-1 font-medium" >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                      stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round"
@@ -28,7 +27,7 @@ const AppNavbar =()=> {
                 <NavLink to="#" smooth className="flex items-center"> Home </NavLink>
             </Typography>
 
-            <Typography as="li" variant="medium"
+            <Typography as="li" variant="h6"
                         className="flex items-center gap-x-2 p-1 font-medium" >
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
@@ -38,7 +37,7 @@ const AppNavbar =()=> {
 
                 <NavLink to="#about" smooth className="flex items-center"> About </NavLink>
             </Typography>
-            <Typography as="li" variant="medium"
+            <Typography as="li" variant="h6"
                         className="flex items-center gap-x-2 p-1 font-medium" >
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
@@ -50,7 +49,7 @@ const AppNavbar =()=> {
 
                 <NavLink to="#projects" smooth className="flex items-center"> Projects </NavLink>
             </Typography>
-            <Typography as="li" variant="medium"
+            <Typography as="li" variant="h6"
                         className="flex items-center gap-x-2 p-1 font-medium" >
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
@@ -61,7 +60,7 @@ const AppNavbar =()=> {
 
                 <NavLink to="#service" smooth className="flex items-center"> Services </NavLink>
             </Typography>
-            <Typography as="li" variant="medium"
+            <Typography as="li" variant="h6"
                         className="flex items-center gap-x-2 p-1 font-medium" >
 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
@@ -72,7 +71,7 @@ const AppNavbar =()=> {
 
                 <NavLink to="#contact" smooth className="flex items-center"> Contact </NavLink>
             </Typography>
-            <Typography as="li" variant="medium"
+            <Typography as="li" variant="h6"
                         className="flex items-center gap-x-2 p-1 font-medium" >
 
                 <motion.a whileHover={{ scale: 1.1 }}
