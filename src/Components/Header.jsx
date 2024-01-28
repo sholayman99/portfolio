@@ -7,7 +7,7 @@ import {motion} from "framer-motion"
 const Header = () => {
     return (
        <>
-           <section id={"#"} className={"flex items-center justify-center gap-5 lg:h-screen  h-[55vh] flex-col"}>
+           <section id={"#"} className={"flex items-center justify-center gap-5 lg:h-screen  h-[70vh] flex-col"}>
                <motion.img
                    animate={{
                        scale: [1, 2, 2, 1, 1],
@@ -34,7 +34,7 @@ const Header = () => {
                    ]}
                    wrapper="span"
                    speed={40}
-                   className={"lg:text-[2.5rem] md:text-[2rem] text-[1.6rem] inline-block text-base"}
+                   className={"lg:text-[2.5rem] md:text-[2rem] text-[1.6em] inline-block text-base"}
                    repeat={Infinity}
                />
 
