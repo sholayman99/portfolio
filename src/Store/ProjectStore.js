@@ -15,6 +15,7 @@ const ProjectStore = create((set)=>({
     },
     SingleProject:null,
     SingleProjectRequest:async(id)=>{
+        set({SingleProject:null});
         let res = await axios.get(`https://sholayman-portfolio-server.vercel.app/api/v1/FindAProject/${id}`);
         let data = await res['data'];
         if(data['status']==="success"){
