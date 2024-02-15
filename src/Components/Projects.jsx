@@ -6,6 +6,7 @@ import {Link} from "react-router-dom"
 import ProjectSkeleton from "../Skeleton/ProjectSkeleton.jsx";
 
 
+
 const Projects = () => {
 
     const {ProjectList} = ProjectStore();
@@ -24,18 +25,19 @@ const Projects = () => {
                         its own case study.</p>
                 </div>
                  <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
-                             className={"lg:py-20 py-10 lg:px-5 md:px-5 grid lg:grid-cols-2 grid-cols-1 gap-8"}>
+                             className={"lg:py-20 py-10 lg:px-5 md:px-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8"}>
                      {
                          ProjectList.slice(0,4).map((item,i)=>{
                              return(
                                  <Link key={i} to={`/details/${item['_id']}`}
                                      className={"transition transform hover:-translate-y-2 " +
                                          "motion-reduce:transition-none motion-reduce:hover:transform-none hover:shadow"} >
-                                     <figure  className="relative h-64 md:h-96 lg:h-96 w-full">
+                                     <figure  className="relative h-40 md:h-60 lg:h-60 w-full">
                                          <img
                                              className="h-full w-full rounded-xl object-cover object-center"
                                              src={item['cover']}
                                              alt="nature image"
+
                                          />
                                          <figcaption className="absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 justify-between rounded-xl border border-white bg-white/75 py-4 px-6 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
                                              <div>
