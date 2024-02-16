@@ -25,14 +25,14 @@ const AllProject = () => {
                </div>
 
                 <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
-                            className={"lg:py-20 py-10 grid lg:grid-cols-2 gap-5"}>
+                            className={"lg:py-20 py-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5"}>
                     {
                         ProjectList.slice(0,4).map((item,i)=>{
                             return(
                                 <Link key={i} to={`/details/${item['_id']}`}
                                       className={"transition transform hover:-translate-y-2 " +
                                           "motion-reduce:transition-none motion-reduce:hover:transform-none hover:shadow"} >
-                                    <figure  className="relative h-64 md:h-96 lg:h-96 w-full">
+                                    <figure  className="relative h-40 md:h-60 lg:h-60 w-full">
                                         <img
                                             className="h-full w-full rounded-xl object-cover object-center"
                                             src={item['cover']}

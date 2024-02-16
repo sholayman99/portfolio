@@ -27,7 +27,7 @@ const Projects = () => {
                  <motion.div initial={{y:120}} transition={{ duration: 1.2,ease:"easeOut"}} whileInView={{y:0}}
                              className={"lg:py-20 py-10 lg:px-5 md:px-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8"}>
                      {
-                         ProjectList.slice(0,4).map((item,i)=>{
+                         ProjectList.slice(0,6).map((item,i)=>{
                              return(
                                  <Link key={i} to={`/details/${item['_id']}`}
                                      className={"transition transform hover:-translate-y-2 " +

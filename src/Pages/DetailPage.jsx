@@ -11,7 +11,7 @@ const DetailPage = () => {
         (async ()=>{
             await SingleProjectRequest(id);
         })()
-    }, [SingleProjectRequest,id]);
+    }, [id]);
 
     return (
         <div>

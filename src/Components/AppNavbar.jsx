@@ -97,8 +97,8 @@ const AppNavbar =()=> {
     );
 
     return (
-        <Navbar className="mx-auto bg-[#111827] border-none z-50 fixed top-0 m-0 shadow-lg font-roboto py-2 lg:py-4">
-            <div className="container mx-auto flex flex-wrap items-center lg:justify-between ">
+        <Navbar className=" bg-[#111827] border-none z-50 fixed top-0 m-0 shadow-lg font-roboto py-2 lg:py-4">
+            <div className="container flex flex-wrap items-center lg:justify-between ">
                 <Typography className=" text-xl font-semibold uppercase cursor-pointer py-1.5">
                    <NavLink to={"#"} smooth> Md.Sholayman</NavLink>
                 </Typography>
