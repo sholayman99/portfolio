@@ -10,25 +10,25 @@ const SocialLink = () => {
             <motion.a   whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                       target={"_blank"} href={""} className={"text-lg md:text-2xl lg:text-3xl"}>
+                       target={"_blank"} href={"https://github.com/sholayman99"} className={"text-lg md:text-2xl lg:text-3xl"}>
                 <FaGithub />
             </motion.a>
             <motion.a   whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                       target={"_blank"} href={""} className={"text-lg md:text-2xl lg:text-3xl"}>
+                       target={"_blank"} href={"https://www.linkedin.com/in/md-sholayman-626776229/"} className={"text-lg md:text-2xl lg:text-3xl"}>
                 <FaLinkedin />
             </motion.a>
             <motion.a   whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
                         transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                       target={"_blank"} href={""} className={"text-lg md:text-2xl lg:text-3xl"}>
+                       target={"_blank"} href={"https://www.facebook.com/profile.php?id=61556642066094"} className={"text-lg md:text-2xl lg:text-3xl"}>
                 <FaFacebook />
             </motion.a>
             <motion.a  whileHover={{ scale: 1.2 }}
                        whileTap={{ scale: 0.9 }}
                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                       target={"_blank"} href={""} className={"text-lg md:text-2xl lg:text-3xl"}>
+                       target={"_blank"} href={"https://www.instagram.com/sholayman_99/"} className={"text-lg md:text-2xl lg:text-3xl"}>
                 <FaInstagram />
             </motion.a>
 
