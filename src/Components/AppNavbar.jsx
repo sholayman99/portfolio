@@ -1,8 +1,8 @@
 import React from "react";
 import {Navbar, MobileNav, Typography, IconButton, } from "@material-tailwind/react";
 import {HashLink as NavLink} from "react-router-hash-link";
-import resume from "../assets/Md. Sholayman Resume.pdf"
-import {motion} from "framer-motion"
+import resume from "../assets/Md Sholayman.pdf";
+import {motion} from "framer-motion";
 
 
 const AppNavbar =()=> {
