@@ -1,7 +1,7 @@
 import React from "react";
 import {Navbar, MobileNav, Typography, IconButton, } from "@material-tailwind/react";
 import {HashLink as NavLink} from "react-router-hash-link";
-import resume from "../assets/Md Sholayman.pdf";
+import resume from "../assets/sholayman.pdf";
 import {motion} from "framer-motion";
 
 
