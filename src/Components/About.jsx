@@ -24,19 +24,19 @@ const About = () => {
                             >
                     <h3 className={"lg:text-2xl text-xl"}>Get to know me!</h3>
                     <div className={"w-full h-0.5 rounded-xl my-5 bg-gray-700"}></div>
-                    <p className={"text-gray-400 font-[300] text-justify lg:text-lg md:text-[15px] text-sm"}>
+                    <p className={"text-gray-400 font-[300] whitespace-break-spaces text-justify lg:text-lg md:text-[15px] text-sm"}>
                         I'm a <span className={"text-white font-[500]"}>Mern-stack </span>
                         Web Developer building the  <span className={"text-white font-[500]"}>Full-stack </span>
                         Websites and Web Applications that leads to the success of the overall product.I'm passionate
-                        and dedicated about my work and flexible to learn anything new.
-                        Check out some of my work in the Projects section. I also like sharing content related
-                        to the stuff that I have learned over the years in <span className={"text-white font-[500]"}> Web Development </span> so it can help
-                        other people of the Dev Community.Feel free to Connect or Follow me on my
-                        <span className={"text-white font-[500]"}> Linkedin,GitHub,Facebook and Instagram </span> where
-                        I post useful content related to Web Development and Programming.I'm open to
-                        <span className={"text-white font-[500]"}> Job </span> opportunities and
-                        <span className={"text-white font-[500]"}> Internship </span> where I can contribute, learn and grow.
-                        If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.</p>
+                        and dedicated about my work and flexible to learn anything new.Check out some of my work in the
+                        projects section.I also like sharing content related to the stuff that I have learned over the
+                        years in<span className={"text-white font-[500]"}> Web Development </span>so it can help
+                        other people of the Dev Community.Feel free to connect or follow me on my<span className={"text-white font-[500]"}> Linkedin
+                        GitHub,Facebook and Instagram </span>where I post useful content related to web development
+                        and programming.I'm open to<span className={"text-white font-[500]"}> Job </span>opportunities
+                        and<span className={"text-white font-[500]"}> Internship </span>where I can contribute,learn
+                        and grow.If you have a good opportunity that matches my skills and experience then don't hesitate
+                        to contact me.</p>
                 </motion.div>
                 <motion.div initial={{y:120}}  transition={{ duration: 1.2 ,ease:"easeOut"}} whileInView={{y:0}}>
                     <h3 className={"lg:text-2xl text-xl"}>My Skills</h3>

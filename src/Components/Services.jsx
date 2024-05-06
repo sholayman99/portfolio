@@ -8,12 +8,12 @@ const Services = () => {
         {
             icon: <BsCodeSlash />,
             title: "Website Development",
-            desc: "Harnessing nearly 2 years of hands-on experience, I specialize in creating dynamic and visually captivating websites. My expertise lies in MERN stack development, ensuring that your web solutions are not only contemporary but also exceptionally functional. Whether you require a personal blog, an e-commerce platform, or a corporate website, I possess the skills to transform your vision into a compelling digital presence.Please pay a visit to the Projects section to see some of works i've done."
+            desc: "Harnessing nearly 2 years of hands-on experience,I specialize in creating dynamic and visually captivating websites. My expertise lies in MERN stack development,ensuring that your web solutions are not only contemporary but also exceptionally functional. Whether you require a personal blog,an e-commerce platform or a corporate website,I possess the skills to transform your vision into a compelling digital presence.Please pay a visit to the Projects section to see some of works i've done."
         },
         {
             icon: <MdClass />,
             title: "One to One Programming Class",
-            desc: "Embark on your programming journey with personalized one-on-one classes. With over 2 years of experience in learning and applying programming concepts, I've had the privilege of instructing at a respected EdTech company. Whether you're taking your first steps in coding or seeking to enhance your skills, I'm here to provide guidance and support as you navigate the world of programming, helping you build a solid foundation and pursue your coding goals.Please pay a visit to the Projects section to see some of works i've done."
+            desc: "Embark on your programming journey with personalized one-on-one classes.With over 2 years of experience in learning and applying programming concepts,I've had the privilege of instructing at a respected EdTech company.Whether you're taking your first steps in coding or seeking to enhance your skills,I'm here to provide guidance and support as you navigate the world of programming,helping you build a solid foundation and pursue your coding goals.Please pay a visit to the projects section to see some of works i've done."
         }
     ];
     return (
